@@ -50,7 +50,7 @@ module RequireAll
         if File.directory? path
           Dir[File.join(path, '**', '*.rb')]
         else
-          path
+          Dir[path]
         end
       end.flatten
     else
